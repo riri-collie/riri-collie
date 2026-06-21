@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    background: #f8f8f8;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.header-video {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.left-box,
+.right-box,
+.header-box {
+    z-index: 2;
+}
+
+.left-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+    background-color: orange;
+    /*後で消す*/
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #f8f1df;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ffe09c;
+    transform: scale(1.12) translateY(-5px);
+}
+
+.right-box {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+
+.sns-icons {
+    display: flex;
+    gap: 35px;
+}
+
+.sns-icons i {
+    font-size: 55px;
+    color: #f8f1df;
+    transition: 0.3s;
+}
+
+.sns-icons i:hover {
+    color: #ffe09c;
+    transform: scale(1.15) translateY(-5px);
+}
+
+.header-box {
+    position: relative;
+    bottom: -50px;
+}
+
+.header-box h1 {
+    font-family: "Dancing Script", cursive;
+    color: #f3f0dc;
+    font-size: 90px;
+    font-weight: 600;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.sub-title {
+    color: #f3f0dc;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin-top: 0;
+}
+
+/*-------------------main-------------------*/
+
+.section-box {
+    background: white;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 60px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.section-box h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section-box h2::after {
+    content: "";
+    display: block;
+    width: 350px;
+    height: 4px;
+    margin: 15px auto 0;
+    background: #ffe09c;
+    border-radius: 1000px;
+}
+
+.contents-top {
+    margin-bottom: 80px;
+}
+
+.contents-top,
+.contents-under {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.contents-under {
+    flex-direction: row-reverse;
+}
+
+.letter-left,
+.letter-right,
+.photo-left,
+.photo-right {
+    width: 45%;
+}
+
+.letter-left,
+.letter-right {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.photo-right,
+.photo-left {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.photo-right img,
+.photo-left img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.photo-right img:hover,
+.photo-left img:hover {
+    transform: scale(1.03);
+}
+
+/*---------------------------footer--------------------------------*/
+
+.sns-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.sns-card {
+    padding: 20px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.sns-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
