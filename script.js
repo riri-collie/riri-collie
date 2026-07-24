@@ -38,6 +38,22 @@ fadeItems.forEach((item) => {
 const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector(".menu");
 
-hamburger.addEventListener("click", () => {
+/* ハンバーガーメニューを開く・閉じる */
+hamburger.addEventListener("click", (event) => {
+    event.stopPropagation();
     menu.classList.toggle("open");
+});
+
+/* メニューを選択したら閉じる */
+navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("open");
+    });
+});
+
+/* メニュー以外をクリックしたら閉じる */
+document.addEventListener("click", (event) => {
+    if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+        menu.classList.remove("open");
+    }
 });

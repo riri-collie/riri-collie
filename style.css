@@ -1,6 +1,5 @@
 html,
 body {
-    width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -97,10 +96,11 @@ header::before {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -5px;
+    bottom: -8px;
     width: 100%;
     height: 3px;
     background: #ffe09c;
+    border-radius: 999px;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease;
@@ -119,17 +119,6 @@ header::before {
     transform: scaleX(1);
 }
 
-.nav-link.active::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 100%;
-    height: 3px;
-    background: #ffe09c;
-    border-radius: 999px;
-}
-
 .sns-icons {
     display: flex;
     gap: 35px;
@@ -138,7 +127,6 @@ header::before {
 .sns-icons i {
     font-size: 55px;
     color: #f8f1df;
-    transition: 0.3s;
 }
 
 .sns-icons i:hover {
@@ -178,7 +166,7 @@ header::before {
 /*-------------------main-------------------*/
 
 .section-box {
-    background: white;
+    background: #fffaf2;
     max-width: 1200px;
     margin: 80px auto;
     padding: 60px;
@@ -188,6 +176,7 @@ header::before {
 }
 
 .section-box h2 {
+    color: #4a4038;
     text-align: center;
     font-size: 36px;
     margin-bottom: 60px;
@@ -261,6 +250,27 @@ header::before {
 
 /*---------------------------footer--------------------------------*/
 
+footer {
+    background: #f3eee5;
+    padding: 60px 0;
+}
+
+#sns h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #4a4038;
+}
+
+#sns h2::after {
+    content: "";
+    display: block;
+    width: 220px;
+    height: 4px;
+    margin: 15px auto 0;
+    background: #ffe09c;
+    border-radius: 999px;
+}
+
 .sns-box {
     display: flex;
     justify-content: space-between;
@@ -271,7 +281,7 @@ header::before {
 .sns-card {
     padding: 20px;
     border-radius: 20px;
-    background: white;
+    background: #fffaf2;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     transition: 0.3s;
 }
@@ -309,6 +319,8 @@ button.hamburger {
 
 @media screen and (max-width: 768px) {
 
+    /*-------------------header-------------------------*/
+
     .nav-bar {
         width: calc(100% - 40px);
         padding: 8px 16px;
@@ -339,7 +351,6 @@ button.hamburger {
         display: flex;
         position: absolute;
         top: 85px;
-        right: 0;
         width: 200px;
         right: 10px;
         flex-direction: column;
@@ -377,13 +388,14 @@ button.hamburger {
         font-size: 20px;
     }
 
+    /*-------------------main-------------------------*/
+
     .right-box {
         display: none;
     }
 
     .contents-top,
     .contents-under {
-        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 25px;
@@ -400,6 +412,12 @@ button.hamburger {
     .letter-left,
     .letter-right {
         text-align: center;
+        font-size: 15px;
+    }
+
+    .letter-left p,
+    .letter-right p {
+        text-align: left;
     }
 
     .photo-left img,
@@ -433,5 +451,25 @@ button.hamburger {
     .section-box h2::after {
         width: 210px;
     }
+
+    /*-------------------footer-------------------------*/
+
+    .sns-box {
+        flex-direction: column;
+        gap: 30px;
+        padding: 10px;
+    }
+
+    .sns-card {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    #sns h2 {
+        text-align: center;
+        font-size: 27px;
+    }
+
 
 }
