@@ -390,6 +390,13 @@ button.hamburger {
 
     /*-------------------main-------------------------*/
 
+    .section-box {
+        width: calc(100% - 20px);
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
     .right-box {
         display: none;
     }
